@@ -1,0 +1,274 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+// Predefined Break-points
+$mediaSmall: 320px;
+$mediaMedium: 768px;
+$mediaBig: 1260px;
+
+* {
+    box-sizing: border-box;
+}
+html, body {
+    padding: 0;
+    @media screen and (min-width: $mediaMedium) {
+        padding: 2em 0;
+    }
+}
+html {
+    font-size: 62.5%;
+    background: #4d244e;
+}
+body {
+    font-size: 1.6rem;
+    background: #4d244e;
+    font-family: 'Bebas Neue', cursive;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation-duration: .2s;
+    animation-name: fadeIn;
+}
+
+.GLWN-todolist .button-add {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 10vw;
+    padding: 20px 10px; 
+    background: none;
+    border: none;
+    color: #FFF;
+    i {
+        cursor: pointer;
+        &:hover {
+            color: #f6bd66;
+        }
+    }
+    @media screen and (min-width: $mediaSmall) {
+        display: none;
+    }
+    @media screen and (min-width: $mediaMedium) {
+        display: block;
+    }
+    &.button-add--empty {
+        display: block;
+        font-size: 50vw;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.GLWN-todolist .mobile-menu {
+    font-family: 'Bebas Neue', cursive;
+    color: #4d244e;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    background: #f6bd66;
+    border: none;
+    padding-top: 6px;
+    @media screen and (min-width: $mediaMedium) {
+        display: none;
+    }
+}
+
+.GLWN-todolist {
+    width: 100%
+}
+
+.GLWN-todolist ul {
+    padding: 0;
+    width: 80%;
+    max-width: 1023px;
+    margin: 0 auto;
+    @media screen and (min-width: $mediaSmall) {
+        width: 100%;
+        padding: 10px 10px 66px 10px;
+    }
+    @media screen and (min-width: $mediaMedium) {
+        width: 80%;
+        max-width: 1023px;
+    }
+}
+
+.GLWN-todolist ul li {
+    position: relative;
+    list-style-type: none;
+    display: inline-flex;
+    width: 100%;
+    background: #ae5f75;
+    filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
+
+    @media screen and (min-width: $mediaSmall) {
+        display: inline-block;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    @media screen and (min-width: $mediaMedium) {
+        display: inline-flex;
+        margin-bottom: 50px;
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 10px;
+        padding: 0;
+    }
+
+    .GLWN-todo {
+        &--titles {
+            @media screen and (min-width: $mediaSmall) {
+                width: 100%;
+            }
+            @media screen and (min-width: $mediaMedium) {
+                margin-left: 5%;
+                width: 55%;
+            }
+        }
+        &--buttons {
+            width: 40%;
+            align-self: center;
+            text-align: right;
+            @media screen and (min-width: $mediaSmall) {
+                width: 100%;
+                padding-bottom: 10px;
+            }
+            @media screen and (min-width: $mediaMedium) {
+                padding: 30px;
+                width: 40%;
+            }
+        }
+    }
+
+    section button {
+        cursor: pointer;
+        padding-top: 4px;
+        background: none;
+        border-color: transparent;
+        color: #FFF;
+        &:hover {
+            color: #f6bd66;
+        }
+        @media screen and (min-width: $mediaSmall) {
+            font-size: 2em;
+            padding: 0;
+            margin-left: 10px;
+        }
+        @media screen and (min-width: $mediaMedium) {
+            font-size: 2.4em;
+        }
+        @media screen and (min-width: $mediaBig) {
+            font-size: 3em;
+        }
+    }
+    h2 {
+        position: relative;
+        filter: drop-shadow(.5rem .5rem 0.25rem rgba(0, 0, 0, 0.2));
+        text-transform: uppercase;
+
+        margin: 0;
+        line-height: .8em;
+        font-weight: 400;
+        @media screen and (min-width: $mediaSmall) {
+            font-size: 3em;
+        }
+        @media screen and (min-width: $mediaMedium) {
+            font-size: 5em;
+            top: -10px;
+        }
+    }
+    h3 {
+        font-size: 1.5em;
+        font-weight: 100;
+        margin: 0;
+        font-style: italic;
+        font-family: 'Roboto', sans-serif;
+        padding-bottom: 10px;
+    }
+    h4 {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+
+        font-family: 'Roboto', sans-serif;
+        font-style: italic;
+        font-weight: 200;
+        color: #f6bd66;
+        bottom: 0;
+        right: 0;
+        @media screen and (min-width: $mediaSmall) {
+            font-size: .9em;
+            margin-right: 12px;
+            margin-bottom: 2px;
+        }
+        @media screen and (min-width: $mediaMedium) {
+            font-size: 1em;
+            margin-right: 36px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.GLWN-modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(77, 36, 78, 0.8);
+    form {
+        background: #f6bd66;
+        position: relative;
+        width: 100%;
+        max-width: 800px;;
+        height: 300px;
+        margin: 0 auto;
+        margin-top: -150px;
+        top: 50%;
+        padding: 22px 30px 0 30px;
+        border-radius: 10px;;
+        label {
+            display: block;
+            font-size: 2em;
+            padding: 0;
+            margin-top: 10px;
+            input[type=text] {
+                border: none;
+                border-radius: 10px;
+                padding: 5px 0 0 20px;
+                font-family: "Bebas Neue", cursive;
+                font-size: 1.5em;
+                width: 100%;
+            }
+        }
+    }
+    .button-wrapper {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        button {
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 5em;
+            &:hover {
+                color: #FFF;
+            }
+        }
+    }
+}
+  
