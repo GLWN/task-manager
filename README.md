@@ -4,19 +4,20 @@ Demo : http://www.glwn.fr/task-manager
 
 Features :
 - Simple CRUD task manager based on react and react-redux hooks.
-- Redux store behaviour controlled by useDispatch and useSelector hooks (no need to use mapStateToProps and mapDispatchToProps anymore)
-- Change tasks order easily
+- Persistent data with localStorage.
+- Redux store behaviour controlled by useDispatch and useSelector hooks (no need to use mapStateToProps and mapDispatchToProps anymore).
+- Change tasks order easily.
 - Works on desktop and mobile, made with Sass styling.
 
 Upcoming features :
-- Priority system
-- Subtasks
-- Task check behaviour
-- Full testing solution
+- Priority system.
+- Subtasks.
+- Task check behaviour.
+- Full testing solution.
 
 Upcoming advanced features :
-- Drag & Drop (desktop only)
-- Color system for tasks
+- Drag & Drop (desktop only).
+- Color system for tasks.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
