@@ -1,22 +1,22 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Who's Who React Game App by GLWN
+## Task Manager v0.1 App by GLWN
 
 Demo : http://www.glwn.fr/task-manager
 
 Features :
-- Who's Who is a game based on "portrait robot" concept. 80 celebrity faces are sliced in three parts and mixed together to compose a brand new fun face. The goal is to find the celebrity name for a slice, you can ask for clues.
-- Rules : find the correct answer and earn 20 points, ask for clues and lose 5 points, wrong answers cost 10 points. You win when you find all the celebrities hidden into the slices.
-- App loader based on images prefetching to guarantee a smooth no-lag experience.
-- Based on ES6, React, Redux and Sass.
-- Fisher-Yates shuffle algorithm to mix assets with no redundancy.
-- Shuffled animation on face generation to provide an organic experience.
-- Animated points counter.
-- Homemade shiny css button animation on rollover.
-- Desktop only experience.
-- Have fun !
+- Simple CRUD task manager based on react and react-redux hooks.
+- Redux store behaviour controlled by useDispatch and useSelector hooks (no need to use mapStateToProps and mapDispatchToProps anymore)
+- Change tasks order easily
+- Works on desktop and mobile, made with Sass styling.
+
+Upcoming features :
+- Priority system
+- Subtasks
+- Task check behaviour
+- Full testing solution
+
+Upcoming advanced features :
+- Drag & Drop (desktop only)
+- Color system for tasks
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
