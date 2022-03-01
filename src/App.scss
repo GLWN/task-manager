@@ -231,16 +231,24 @@ body {
     left: 0;
     background: rgba(77, 36, 78, 0.8);
     form {
+        @media screen and (min-width: $mediaSmall) {
+            height: 270px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        @media screen and (min-width: $mediaMedium) {
+
+            height: 300px;
+            margin-top: -150px;
+            top: 50%;
+            border-radius: 10px;
+        }
         background: #f6bd66;
         position: relative;
         width: 100%;
-        max-width: 800px;;
-        height: 300px;
+        max-width: 800px;
         margin: 0 auto;
-        margin-top: -150px;
-        top: 50%;
         padding: 22px 30px 0 30px;
-        border-radius: 10px;;
         label {
             display: block;
             font-size: 2em;
@@ -262,6 +270,11 @@ body {
         right: 10px;
         button {
             cursor: pointer;
+            display: inline-block;
+            @media screen and (min-width: $mediaSmall) {
+                color: #000;
+                font-size: 4em;
+            }
             background: none;
             border: none;
             font-size: 5em;
