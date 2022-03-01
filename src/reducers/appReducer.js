@@ -36,13 +36,13 @@ const appReducer = (state = initialState, action) => {
             };
         case 'changeTodoPosition':
             const { pos, newPos } = action.payload;
-            const newTodosArray = state.todos;
+            const newTodosArray = [...state.todos];
             const objToDisplace = state.todos[pos];
             newTodosArray.splice(pos, 1);
             newTodosArray.splice(newPos, 0, objToDisplace);
             return {
                 ...state,
-                todos: [...newTodosArray]
+                todos: newTodosArray
             }
         case 'setModalVisibility':
             return {
